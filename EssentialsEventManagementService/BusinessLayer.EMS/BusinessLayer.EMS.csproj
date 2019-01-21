@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer.EMS.Repository\DataLayer.EMS.Repository.csproj" />
+    <ProjectReference Include="..\Mappers.EMS\Mappers.EMS.csproj" />
+    <ProjectReference Include="..\Models.EMS.Domain\Models.EMS.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

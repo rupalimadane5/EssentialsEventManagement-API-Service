@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Models.EMS.Domain\Models.EMS.Domain.csproj" />
+    <ProjectReference Include="..\Models.EMS.Dto\Models.EMS.Dto.csproj" />
+    <ProjectReference Include="..\Models.EMS.Entity\Models.EMS.Entity.csproj" />
+  </ItemGroup>
+
 </Project>
