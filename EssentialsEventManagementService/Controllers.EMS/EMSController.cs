@@ -20,16 +20,16 @@ namespace Controllers.EMS
         [HttpGet]
         [Route("/events")]
         [Produces("application/json")]
-        public GetEventResponse GetEventsByDate([FromRoute] DateTime fromDate, DateTime toDate)
+        public GetEventResponse GetEventsByDate([FromQuery] GetEventRequest request)
         {
             try
             {
-                if (fromDate == null || fromDate <= DateTime.MinValue || toDate == null || toDate <= DateTime.MinValue)
+                if (request.FromDate <= DateTime.MinValue  || request.ToDate <= DateTime.MinValue)
                 {
-                    throw new Exception($"invalid fromDate {fromDate} or toDate {toDate}");
+                    throw new Exception($"invalid fromDate {request.FromDate} or toDate {request.ToDate}");
                 }
 
-                var result = _manager.GetEventDetails(fromDate.ToString("d"), toDate.ToString("d"));
+                var result = _manager.GetEventDetails(request.FromDate.ToString("d"), request.ToDate.ToString("d"));
                 if (result == null)
                 {
                     throw new Exception($"Event details not found {HttpStatusCode.NotFound}");
