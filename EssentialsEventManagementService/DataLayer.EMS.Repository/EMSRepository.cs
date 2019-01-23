@@ -19,8 +19,8 @@ namespace DataLayer.EMS.Repository
             clientConfig = new AmazonDynamoDBConfig();
             clientConfig.RegionEndpoint = RegionEndpoint.USWest2;
             client = new AmazonDynamoDBClient(
-                awsAccessKeyId: "AKIAJUIVEFNPQPOKCEEA",
-                awsSecretAccessKey: "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",
+                awsAccessKeyId: "******************",
+                awsSecretAccessKey: "***********************************",
                 clientConfig: clientConfig);
         }
 
